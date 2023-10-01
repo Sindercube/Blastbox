@@ -1,0 +1,16 @@
+{
+    "rewards": { "recipes": [ "blastbox:blastbox" ] },
+    "criteria": {
+        "has_item": {
+            "trigger": "minecraft:inventory_changed", "conditions": {
+                "items": [ { "items": [ "minecraft:echo_shard" ] } ] }
+            },
+        "has_recipe": {
+            "trigger": "minecraft:recipe_unlocked", "conditions": { "recipe": "blastbox:blastbox" }
+        }
+    },
+    "requirements": [ [
+        "has_item",
+        "has_recipe"
+    ] ]
+}

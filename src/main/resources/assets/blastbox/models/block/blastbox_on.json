@@ -1,0 +1,10 @@
+{
+    "parent": "blastbox:block/all_sides",
+    "textures": {
+        "front": "blastbox:block/blastbox_front_on",
+        "side": "blastbox:block/blastbox_side",
+        "top": "blastbox:block/blastbox_top",
+        "back": "blastbox:block/blastbox_back",
+        "bottom": "blastbox:block/blastbox_bottom"
+    }
+}

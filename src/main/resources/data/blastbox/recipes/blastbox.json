@@ -1,0 +1,18 @@
+{
+    "type": "crafting_shaped",
+    "category": "redstone",
+    "pattern": [
+        "CCC",
+        "CRE",
+        "CCC"
+    ],
+    "key": {
+        "C": {"item": "minecraft:cobbled_deepslate"},
+        "R": {"item": "minecraft:redstone"},
+        "E": {"item": "minecraft:echo_shard"}
+    },
+    "result": {
+        "item": "blastbox:blastbox",
+        "count": 8
+    }
+}

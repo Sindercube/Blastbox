@@ -1,0 +1,27 @@
+plugins {
+	id 'fabric-loom' version '1.3-SNAPSHOT'
+}
+
+base {
+	archivesName = "${mod_id}-${mod_version}"
+}
+
+dependencies {
+	implementation 'org.jetbrains:annotations:24.0.0'
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+processResources {
+	filesMatching("fabric.mod.json") {
+		expand project.properties
+	}
+	doLast {
+		fileTree(dir: outputs.files.asPath, include: "**/*.json").each {
+			File file -> file.text = file.text.replaceAll("\\s(?=[\\s\":{}])", "")
+		}
+	}
+
+}
